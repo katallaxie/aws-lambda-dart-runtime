@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Environment class from the environment library, for the Dart programming language.">
+  <title>Environment class - environment library - Dart API</title>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../static-assets/github.css">
+  <link rel="stylesheet" href="../static-assets/styles.css">
+  <link rel="icon" href="../static-assets/favicon.png">
+
+</head>
+
+<body data-base-href="../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">aws_lambda_dart_runtime</a></li>
+    <li><a href="../runtime_environment/runtime_environment-library.html">environment</a></li>
+    <li class="self-crumb">Environment class</li>
+  </ol>
+  <div class="self-name">Environment</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="../index.html">aws_lambda_dart_runtime</a></li>
+      <li><a href="../runtime_environment/runtime_environment-library.html">environment</a></li>
+      <li class="self-crumb">Environment class</li>
+    </ol>
+    
+    <h5>environment library</h5>
+    <ol>
+  <li class="section-title"><a href="../runtime_environment/runtime_environment-library.html#classes">Classes</a></li>
+  <li><a href="../runtime_environment/Environment-class.html">Environment</a></li>
+
+
+
+
+
+
+
+
+</ol>
+
+  </div>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div><h1><span class="kind-class">Environment</span> class     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ </h1></div>
+
+    <section class="desc markdown">
+      <p>RuntimeEnvironment contains the Lambda execution context information.
+Note: this should not be used directly.</p>
+    </section>
+    
+
+    <section class="summary offset-anchor" id="constructors">
+      <h2>Constructors</h2>
+
+      <dl class="constructor-summary-list">
+        <dt id="Environment" class="callable">
+          <span class="name"><a href="../runtime_environment/Environment/Environment.html">Environment</a></span><span class="signature">(<span class="parameter" id="-param-runtimeAPI">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">runtimeAPI</span>, </span><span class="parameter" id="-param-handler"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">handler</span>, </span><span class="parameter" id="-param-functionName"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">functionName</span>, </span><span class="parameter" id="-param-functionMemorySize"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">functionMemorySize</span>, </span><span class="parameter" id="-param-functionVersion"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">functionVersion</span>, </span><span class="parameter" id="-param-logGroupName"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">logGroupName</span>, </span><span class="parameter" id="-param-logStreamName"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">logStreamName</span>, </span><span class="parameter" id="-param-region"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">region</span>, </span><span class="parameter" id="-param-executionEnv"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">executionEnv</span>, </span><span class="parameter" id="-param-accessKey"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">accessKey</span>, </span><span class="parameter" id="-param-secretAccessKey"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">secretAccessKey</span>, </span><span class="parameter" id="-param-sessionToken"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">sessionToken</span>}</span>)</span>
+        </dt>
+        <dd>
+           
+          <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="Environment.raw" class="callable">
+          <span class="name"><a href="../runtime_environment/Environment/Environment.raw.html">Environment.raw</a></span><span class="signature">(<span class="parameter" id="raw-param-handler">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span> <span class="parameter-name">handler</span>, </span><span class="parameter" id="raw-param-functionName"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span> <span class="parameter-name">functionName</span>, </span><span class="parameter" id="raw-param-functionMemorySize"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span> <span class="parameter-name">functionMemorySize</span>, </span><span class="parameter" id="raw-param-functionVersion"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span> <span class="parameter-name">functionVersion</span>, </span><span class="parameter" id="raw-param-logGroupName"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span> <span class="parameter-name">logGroupName</span>, </span><span class="parameter" id="raw-param-logStreamName"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span> <span class="parameter-name">logStreamName</span>, </span><span class="parameter" id="raw-param-region"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span> <span class="parameter-name">region</span>, </span><span class="parameter" id="raw-param-executionEnv"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span> <span class="parameter-name">executionEnv</span>, </span><span class="parameter" id="raw-param-accessKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span> <span class="parameter-name">accessKey</span>, </span><span class="parameter" id="raw-param-secretAccessKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span> <span class="parameter-name">secretAccessKey</span>, </span><span class="parameter" id="raw-param-runtimeAPI"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span> <span class="parameter-name">runtimeAPI</span>, </span><span class="parameter" id="raw-param-sessionToken"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span> <span class="parameter-name">sessionToken</span>}</span>)</span>
+        </dt>
+        <dd>
+           
+          <div class="constructor-modifier features">const</div>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="accessKey" class="property">
+          <span class="name"><a href="../runtime_environment/Environment/accessKey.html">accessKey</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span>         
+        </dt>
+        <dd>
+          Access key that is acquired via STS. 
+                  <div class="features">final</div>
+</dd>
+        <dt id="executionEnv" class="property">
+          <span class="name"><a href="../runtime_environment/Environment/executionEnv.html">executionEnv</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span>         
+        </dt>
+        <dd>
+          The execution environment of the function. 
+                  <div class="features">final</div>
+</dd>
+        <dt id="functionMemorySize" class="property">
+          <span class="name"><a href="../runtime_environment/Environment/functionMemorySize.html">functionMemorySize</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span>         
+        </dt>
+        <dd>
+          Memory sized that is allocated to execution of the function. 
+                  <div class="features">final</div>
+</dd>
+        <dt id="functionName" class="property">
+          <span class="name"><a href="../runtime_environment/Environment/functionName.html">functionName</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span>         
+        </dt>
+        <dd>
+          Name of the function that is invoked. 
+                  <div class="features">final</div>
+</dd>
+        <dt id="functionVersion" class="property">
+          <span class="name"><a href="../runtime_environment/Environment/functionVersion.html">functionVersion</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span>         
+        </dt>
+        <dd>
+          Version of the function that is invoked. 
+                  <div class="features">final</div>
+</dd>
+        <dt id="handler" class="property">
+          <span class="name"><a href="../runtime_environment/Environment/handler.html">handler</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span>         
+        </dt>
+        <dd>
+          Handler that is used for the invocation of the function 
+                  <div class="features">final</div>
+</dd>
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="https://api.dart.dev/stable/2.12.2/dart-core/Object/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/int-class.html">int</a></span>         
+        </dt>
+        <dd class="inherited">
+          The hash code for this object. <a href="https://api.dart.dev/stable/2.12.2/dart-core/Object/hashCode.html">[...]</a>
+                  <div class="features">read-only, inherited</div>
+</dd>
+        <dt id="logGroupName" class="property">
+          <span class="name"><a href="../runtime_environment/Environment/logGroupName.html">logGroupName</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span>         
+        </dt>
+        <dd>
+          Cloudwatch LogGroup that is associated with the Lambda. 
+                  <div class="features">final</div>
+</dd>
+        <dt id="logStreamName" class="property">
+          <span class="name"><a href="../runtime_environment/Environment/logStreamName.html">logStreamName</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span>         
+        </dt>
+        <dd>
+          Cloudwach LogStream that is associated with the Lambda. 
+                  <div class="features">final</div>
+</dd>
+        <dt id="region" class="property">
+          <span class="name"><a href="../runtime_environment/Environment/region.html">region</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span>         
+        </dt>
+        <dd>
+          Region that this function exists in. 
+                  <div class="features">final</div>
+</dd>
+        <dt id="runtimeAPI" class="property">
+          <span class="name"><a href="../runtime_environment/Environment/runtimeAPI.html">runtimeAPI</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span>         
+        </dt>
+        <dd>
+          The Runtime API endpoint 
+                  <div class="features">final</div>
+</dd>
+        <dt id="runtimeType" class="property inherited">
+          <span class="name"><a href="https://api.dart.dev/stable/2.12.2/dart-core/Object/runtimeType.html">runtimeType</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/Type-class.html">Type</a></span>         
+        </dt>
+        <dd class="inherited">
+          A representation of the runtime type of the object. 
+                  <div class="features">read-only, inherited</div>
+</dd>
+        <dt id="secretAccessKey" class="property">
+          <span class="name"><a href="../runtime_environment/Environment/secretAccessKey.html">secretAccessKey</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span>         
+        </dt>
+        <dd>
+          Secret access key that is acquired via STS. 
+                  <div class="features">final</div>
+</dd>
+        <dt id="sessionToken" class="property">
+          <span class="name"><a href="../runtime_environment/Environment/sessionToken.html">sessionToken</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span>         
+        </dt>
+        <dd>
+          The session token from STS. 
+                  <div class="features">final</div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+          <span class="name"><a href="https://api.dart.dev/stable/2.12.2/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+          Invoked when a non-existent method or property is accessed. <a href="https://api.dart.dev/stable/2.12.2/dart-core/Object/noSuchMethod.html">[...]</a>
+                  <div class="features">inherited</div>
+</dd>
+        <dt id="toString" class="callable inherited">
+          <span class="name"><a href="https://api.dart.dev/stable/2.12.2/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/String-class.html">String</a></span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+          A string representation of this object. <a href="https://api.dart.dev/stable/2.12.2/dart-core/Object/toString.html">[...]</a>
+                  <div class="features">inherited</div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+          <span class="name"><a href="https://api.dart.dev/stable/2.12.2/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.2/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.12.2/dart-core/bool-class.html">bool</a></span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+          The equality operator. <a href="https://api.dart.dev/stable/2.12.2/dart-core/Object/operator_equals.html">[...]</a>
+                  <div class="features">inherited</div>
+</dd>
+      </dl>
+    </section>
+
+
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+    <li class="section-title"><a href="../runtime_environment/Environment-class.html#constructors">Constructors</a></li>
+    <li><a href="../runtime_environment/Environment/Environment.html">Environment</a></li>
+    <li><a href="../runtime_environment/Environment/Environment.raw.html">raw</a></li>
+
+
+    <li class="section-title">
+      <a href="../runtime_environment/Environment-class.html#instance-properties">Properties</a>
+    </li>
+    <li><a href="../runtime_environment/Environment/accessKey.html">accessKey</a></li>
+    <li><a href="../runtime_environment/Environment/executionEnv.html">executionEnv</a></li>
+    <li><a href="../runtime_environment/Environment/functionMemorySize.html">functionMemorySize</a></li>
+    <li><a href="../runtime_environment/Environment/functionName.html">functionName</a></li>
+    <li><a href="../runtime_environment/Environment/functionVersion.html">functionVersion</a></li>
+    <li><a href="../runtime_environment/Environment/handler.html">handler</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.12.2/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li><a href="../runtime_environment/Environment/logGroupName.html">logGroupName</a></li>
+    <li><a href="../runtime_environment/Environment/logStreamName.html">logStreamName</a></li>
+    <li><a href="../runtime_environment/Environment/region.html">region</a></li>
+    <li><a href="../runtime_environment/Environment/runtimeAPI.html">runtimeAPI</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.12.2/dart-core/Object/runtimeType.html">runtimeType</a></li>
+    <li><a href="../runtime_environment/Environment/secretAccessKey.html">secretAccessKey</a></li>
+    <li><a href="../runtime_environment/Environment/sessionToken.html">sessionToken</a></li>
+
+    <li class="section-title inherited"><a href="../runtime_environment/Environment-class.html#instance-methods">Methods</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.12.2/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.12.2/dart-core/Object/toString.html">toString</a></li>
+
+    <li class="section-title inherited"><a href="../runtime_environment/Environment-class.html#operators">Operators</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.12.2/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    aws_lambda_dart_runtime
+      1.0.3+2
+  </span>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../static-assets/typeahead.bundle.min.js"></script>
+<script src="../static-assets/highlight.pack.js"></script>
+<script src="../static-assets/script.js"></script>
+
+
+</body>
+
+</html>
