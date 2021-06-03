@@ -42,7 +42,22 @@
         },
         "resourcePath": "/{proxy+}",
         "httpMethod": "POST",
-        "apiId": "wt6mne2s9k"
+        "apiId": "wt6mne2s9k",
+        "authorizer": {
+            "claims": {
+                "sub": "123456789",
+                "aud": "",
+                "email_verified": "",
+                "event_id": "",
+                "token_use": "",
+                "iss": "",
+                "cognito:username": "",
+                "name": "test",
+                "exp": "",
+                "ist": "",
+                "email": "example@test.com"
+            }
+        }
     },
     "body": "{\"foo\":\"bar\"}",
     "resource": "/{proxy+}",

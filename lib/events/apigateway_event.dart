@@ -1,5 +1,5 @@
-import 'dart:io';
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:aws_lambda_dart_runtime/runtime/event.dart';
 import 'package:json_annotation/json_annotation.dart';
@@ -104,8 +104,7 @@ class AwsApiGatewayEvent extends Event {
   /// Request Context ...
   final AwsApiGatewayEventRequestContext? requestContext;
 
-  factory AwsApiGatewayEvent.fromJson(Map<String, dynamic> json) =>
-      _$AwsApiGatewayEventFromJson(json);
+  factory AwsApiGatewayEvent.fromJson(Map<String, dynamic> json) => _$AwsApiGatewayEventFromJson(json);
 
   Map<String, dynamic> toJson() => _$AwsApiGatewayEventToJson(this);
 
@@ -235,12 +234,13 @@ class AwsApiGatewayEventRequestContext {
   @JsonKey()
   final String? apiId;
 
-  factory AwsApiGatewayEventRequestContext.fromJson(
-          Map<String, dynamic> json) =>
+  @JsonKey()
+  final AwsApiGatewayEventRequestContextAuthorizer? authorizer;
+
+  factory AwsApiGatewayEventRequestContext.fromJson(Map<String, dynamic> json) =>
       _$AwsApiGatewayEventRequestContextFromJson(json);
 
-  Map<String, dynamic> toJson() =>
-      _$AwsApiGatewayEventRequestContextToJson(this);
+  Map<String, dynamic> toJson() => _$AwsApiGatewayEventRequestContextToJson(this);
 
   const AwsApiGatewayEventRequestContext(
       {this.accountId,
@@ -249,7 +249,8 @@ class AwsApiGatewayEventRequestContext {
       this.requestId,
       this.resourcePath,
       this.httpMethod,
-      this.apiId});
+      this.apiId,
+      this.authorizer});
 }
 
 /// API Gateway Event Identity
@@ -288,12 +289,10 @@ class AwsApiGatewayEventRequestContextIdentity {
   @JsonKey()
   final String? user;
 
-  factory AwsApiGatewayEventRequestContextIdentity.fromJson(
-          Map<String, dynamic> json) =>
+  factory AwsApiGatewayEventRequestContextIdentity.fromJson(Map<String, dynamic> json) =>
       _$AwsApiGatewayEventRequestContextIdentityFromJson(json);
 
-  Map<String, dynamic> toJson() =>
-      _$AwsApiGatewayEventRequestContextIdentityToJson(this);
+  Map<String, dynamic> toJson() => _$AwsApiGatewayEventRequestContextIdentityToJson(this);
 
   const AwsApiGatewayEventRequestContextIdentity(
       {this.cognitoIdentityPoolId,
@@ -307,4 +306,63 @@ class AwsApiGatewayEventRequestContextIdentity {
       this.user,
       this.userAgent,
       this.userArn});
+}
+
+/// API Gateway Event Request Context Authorizer
+@JsonSerializable()
+class AwsApiGatewayEventRequestContextAuthorizer {
+  @JsonKey()
+  final AwsApiGatewayEventRequestContextAuthorizerClaims? claims;
+
+  factory AwsApiGatewayEventRequestContextAuthorizer.fromJson(Map<String, dynamic> json) =>
+      _$AwsApiGatewayEventRequestContextAuthorizerFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AwsApiGatewayEventRequestContextAuthorizerToJson(this);
+
+  const AwsApiGatewayEventRequestContextAuthorizer(this.claims);
+}
+
+/// API Gateway Event Request Context Authorizer Claims
+@JsonSerializable()
+class AwsApiGatewayEventRequestContextAuthorizerClaims {
+  @JsonKey()
+  final String? sub;
+
+  @JsonKey()
+  final String? aud;
+
+  @JsonKey()
+  final String? email_verified;
+
+  @JsonKey()
+  final String? event_id;
+
+  @JsonKey()
+  final String? token_use;
+
+  @JsonKey()
+  final String? iss;
+
+  @JsonKey(name: 'cognito:username')
+  final String? cognito_username;
+
+  @JsonKey()
+  final String? name;
+
+  @JsonKey()
+  final String? exp;
+
+  @JsonKey()
+  final String? iat;
+
+  @JsonKey()
+  final String? email;
+
+  factory AwsApiGatewayEventRequestContextAuthorizerClaims.fromJson(Map<String, dynamic> json) =>
+      _$AwsApiGatewayEventRequestContextAuthorizerClaimsFromJson(json);
+
+  Map<String, dynamic> toJson() => _$AwsApiGatewayEventRequestContextAuthorizerClaimsToJson(this);
+
+  const AwsApiGatewayEventRequestContextAuthorizerClaims(this.sub, this.aud, this.email_verified, this.event_id,
+      this.token_use, this.iss, this.cognito_username, this.name, this.exp, this.iat, this.email);
 }
