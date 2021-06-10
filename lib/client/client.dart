@@ -1,6 +1,6 @@
-import 'dart:io';
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:http/http.dart' as http;
 
@@ -133,7 +133,7 @@ class Client {
       Uri.parse(
         'http://$runtimeApi/$runtimeApiVersion/runtime/invocation/$requestId/response',
       ),
-      body: jsonEncode(payload),
+      body: jsonEncode(payload.body),
     );
   }
 
