@@ -97,6 +97,10 @@ AwsApiGatewayEventRequestContext _$AwsApiGatewayEventRequestContextFromJson(
     resourcePath: json['resourcePath'] as String?,
     httpMethod: json['httpMethod'] as String?,
     apiId: json['apiId'] as String?,
+    authorizer: json['authorizer'] == null
+        ? null
+        : AwsApiGatewayEventRequestContextAuthorizer.fromJson(
+            json['authorizer'] as Map<String, dynamic>),
   );
 }
 
@@ -110,6 +114,7 @@ Map<String, dynamic> _$AwsApiGatewayEventRequestContextToJson(
       'resourcePath': instance.resourcePath,
       'httpMethod': instance.httpMethod,
       'apiId': instance.apiId,
+      'authorizer': instance.authorizer,
     };
 
 AwsApiGatewayEventRequestContextIdentity
@@ -145,4 +150,55 @@ Map<String, dynamic> _$AwsApiGatewayEventRequestContextIdentityToJson(
       'userArn': instance.userArn,
       'userAgent': instance.userAgent,
       'user': instance.user,
+    };
+
+AwsApiGatewayEventRequestContextAuthorizer
+    _$AwsApiGatewayEventRequestContextAuthorizerFromJson(
+        Map<String, dynamic> json) {
+  return AwsApiGatewayEventRequestContextAuthorizer(
+    json['claims'] == null
+        ? null
+        : AwsApiGatewayEventRequestContextAuthorizerClaims.fromJson(
+            json['claims'] as Map<String, dynamic>),
+  );
+}
+
+Map<String, dynamic> _$AwsApiGatewayEventRequestContextAuthorizerToJson(
+        AwsApiGatewayEventRequestContextAuthorizer instance) =>
+    <String, dynamic>{
+      'claims': instance.claims,
+    };
+
+AwsApiGatewayEventRequestContextAuthorizerClaims
+    _$AwsApiGatewayEventRequestContextAuthorizerClaimsFromJson(
+        Map<String, dynamic> json) {
+  return AwsApiGatewayEventRequestContextAuthorizerClaims(
+    json['sub'] as String?,
+    json['aud'] as String?,
+    json['email_verified'] as String?,
+    json['event_id'] as String?,
+    json['token_use'] as String?,
+    json['iss'] as String?,
+    json['cognito:username'] as String?,
+    json['name'] as String?,
+    json['exp'] as String?,
+    json['iat'] as String?,
+    json['email'] as String?,
+  );
+}
+
+Map<String, dynamic> _$AwsApiGatewayEventRequestContextAuthorizerClaimsToJson(
+        AwsApiGatewayEventRequestContextAuthorizerClaims instance) =>
+    <String, dynamic>{
+      'sub': instance.sub,
+      'aud': instance.aud,
+      'email_verified': instance.email_verified,
+      'event_id': instance.event_id,
+      'token_use': instance.token_use,
+      'iss': instance.iss,
+      'cognito:username': instance.cognito_username,
+      'name': instance.name,
+      'exp': instance.exp,
+      'iat': instance.iat,
+      'email': instance.email,
     };

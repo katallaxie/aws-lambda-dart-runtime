@@ -1,6 +1,6 @@
+import 'dart:convert';
 import 'dart:io';
 import 'dart:io' show File;
-import 'dart:convert';
 
 import 'package:aws_lambda_dart_runtime/aws_lambda_dart_runtime.dart';
 import 'package:test/test.dart';
@@ -28,6 +28,8 @@ void main() {
       expect(event.requestContext!.resourcePath, equals('/{proxy+}'));
       expect(event.headers!.raw['Accept-Encoding'],
           equals('gzip, deflate, lzma, sdch, br'));
+      expect(event.requestContext!.authorizer!.claims!.email,
+          equals('example@test.com'));
     });
     test('factory creates event with default values', () {
       final response = AwsApiGatewayResponse.fromJson({});
