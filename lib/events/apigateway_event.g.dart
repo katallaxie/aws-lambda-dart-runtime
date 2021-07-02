@@ -97,6 +97,10 @@ AwsApiGatewayEventRequestContext _$AwsApiGatewayEventRequestContextFromJson(
     resourcePath: json['resourcePath'] as String?,
     httpMethod: json['httpMethod'] as String?,
     apiId: json['apiId'] as String?,
+    identity: json['identity'] == null
+        ? null
+        : AwsApiGatewayEventRequestContextIdentity.fromJson(
+            json['identity'] as Map<String, dynamic>),
   );
 }
 
@@ -110,6 +114,7 @@ Map<String, dynamic> _$AwsApiGatewayEventRequestContextToJson(
       'resourcePath': instance.resourcePath,
       'httpMethod': instance.httpMethod,
       'apiId': instance.apiId,
+      'identity': instance.identity,
     };
 
 AwsApiGatewayEventRequestContextIdentity

@@ -26,6 +26,7 @@ void main() {
           equals('41b45ea3-70b5-11e6-b7bd-69b5aaebc7d9'));
       expect(event.queryStringParameters, equals({'name': 'me'}));
       expect(event.requestContext!.resourcePath, equals('/{proxy+}'));
+      expect(event.requestContext!.identity!.sourceIp, equals('192.168.100.1'));
       expect(event.headers!.raw['Accept-Encoding'],
           equals('gzip, deflate, lzma, sdch, br'));
     });

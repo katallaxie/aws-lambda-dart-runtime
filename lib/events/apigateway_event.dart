@@ -235,6 +235,9 @@ class AwsApiGatewayEventRequestContext {
   @JsonKey()
   final String? apiId;
 
+  @JsonKey()
+  final AwsApiGatewayEventRequestContextIdentity? identity;
+
   factory AwsApiGatewayEventRequestContext.fromJson(
           Map<String, dynamic> json) =>
       _$AwsApiGatewayEventRequestContextFromJson(json);
@@ -249,7 +252,8 @@ class AwsApiGatewayEventRequestContext {
       this.requestId,
       this.resourcePath,
       this.httpMethod,
-      this.apiId});
+      this.apiId,
+      this.identity});
 }
 
 /// API Gateway Event Identity
